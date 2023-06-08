@@ -23,18 +23,4 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'devops'
-    organization: 'az-400devops'
-    scannerMode: 'MSBuild'
-    projectKey: 'devops'
-    projectName: 'devops'
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-- task: SonarCloudAnalyze@1
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
 
